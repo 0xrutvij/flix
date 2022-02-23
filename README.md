@@ -2,8 +2,6 @@
 
 Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-📝 `NOTE - PASTE PART 2 SNIPPET HERE:` Paste the README template for part 2 of this assignment here at the top. This will show a history of your development process, which users stories you completed and how your app looked and functioned at each step.
-
 ---
 
 ## Flix Part 1
@@ -16,19 +14,19 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [X] (3pts) User can view the movie poster image for each movie.
 
 #### BONUS
-- [ ] (2pt) User can view the app on various device sizes and orientations.
-- [ ] (1pt) Run your app on a real device.
+- [X] (2pt) User can view the app on various device sizes and orientations.
+- [X] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF & Screenshots
+
+<img src="https://github.com/0xrutvij/flix/blob/main/deviceDemo.gif" width=250><br>
 
 ![Auto Layount Launch Screen](https://github.com/0xrutvij/flix/blob/main/autoLayout.png)
 
 ![Varying Device and Screen Orientation Permuations](https://github.com/0xrutvij/flix/blob/main/multiDeviceMultOrient.png)
 
-
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
-<img src="YOUR_GIF_URL_HERE" width=250><br>
-
 ### Notes
-Describe any challenges encountered while building the app.
+<details>
+  <summary>HQ GIF Link</summary>
+  https://drive.google.com/file/d/1KEu-NIKsK67vwJARov6q2mb_Ams2Cg_S/view?usp=sharing
+</details>
