@@ -21,7 +21,7 @@ class FlixViewController: UIViewController, UITableViewDataSource, UITableViewDe
         moviesTableView.dataSource = self
         moviesTableView.delegate = self
 
-        moviesTableView.rowHeight = 150
+        moviesTableView.rowHeight = 170
 
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -56,12 +56,26 @@ class FlixViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let synopsis = movie["overview"] as! String
         cell.synopsisLabel.text = synopsis
 
-        let baseUrl = "https://image.tmdb.org/t/p/w780"
+        let baseUrl = "https://image.tmdb.org/t/p/original"
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
         cell.posterView.af.setImage(withURL: posterUrl!)
 
         return cell
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Loading up the details screen.")
+
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = moviesTableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+
+        // Pass the selected movie to the details view controller
+        let detailsViewController = segue.destination as! FlixDetailsViewController
+        detailsViewController.movie = movie
+        moviesTableView.deselectRow(at: indexPath, animated: true)
     }
 
 }
